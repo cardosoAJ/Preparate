@@ -1,0 +1,493 @@
+/* =========================================================
+   CONFIGURAÇÃO GERAL DA PÁGINA PRINCIPAL
+   Fundo rosa-claro semelhante ao da imagem de referência
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff1f1;
+    color: #111;
+}
+
+.inicio {
+    width: 100%;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   Área superior branca/rosada com o logotipo e
+   o botão "iniciar secção"
+   ========================================================= */
+
+.header {
+    width: 100%;
+    height: 75px;
+    background-color: #fff7f7;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+}
+
+.logotipo {
+    width: 120px;
+    height: auto;
+}
+
+.link {
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   IMAGEM PRINCIPAL / HERO
+   A imagem ocupa toda a área principal.
+   O ::after cria uma camada branca transparente sobre
+   a fotografia para diminuir a intensidade da imagem
+   e facilitar a leitura do texto.
+   ========================================================= */
+
+.introducao {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.imagemprincipal {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    /* Diminui a intensidade da imagem principal */
+    opacity: 0.68;
+}
+
+
+/* Camada transparente sobre a imagem principal */
+.introducao::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* Branco transparente para deixar a imagem mais suave */
+    background-color: rgba(255, 255, 255, 0.18);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TEXTO PRINCIPAL
+   O texto fica por cima da imagem principal.
+   ========================================================= */
+
+.texto1 {
+    position: absolute;
+
+    left: 5%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 600px;
+
+    font-size: 48px;
+    line-height: 1.12;
+    font-weight: 800;
+
+    color: #000;
+
+    z-index: 2;
+}
+
+
+/* Palavra "Explicadores" em azul */
+.azul {
+    color: #1649d8;
+}
+
+
+/* Palavra "grupos" e outros elementos verdes */
+.verde {
+    color: #68b33f;
+}
+
+
+/* =========================================================
+   ÁREA DOS DOIS CARDS
+   Os dois cards ficam lado a lado como na imagem.
+   ========================================================= */
+
+.cards {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 25px auto;
+
+    display: flex;
+    gap: 25px;
+    align-items: stretch;
+}
+
+
+/* Cada card ocupa metade da área */
+.grupo1,
+.grupo01 {
+    position: relative;
+
+    width: 50%;
+    min-height: 390px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background-color: #fff;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   CABEÇALHO DOS CARDS
+   Parte azul/verde que aparece acima da fotografia.
+   ========================================================= */
+
+.cabecalho {
+    position: relative;
+    z-index: 3;
+
+    padding: 15px 20px;
+
+    background-color: #3d72dc;
+
+    color: white;
+}
+.cabecalho1{
+    background-color: #0649d8;
+    color: white;
+     padding: 16px 25px;
+     
+ }
+
+
+/* O segundo cabeçalho fica verde */
+.Explicador .cabecalho {
+    background-color: #75b94b;
+}
+
+.preparacao {
+    font-size: 20px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    min-width: 250px;
+    border-radius: 10px;
+}
+
+.texte2 {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   IMAGENS DOS CARDS
+   A imagem é colocada como fundo visual do conteúdo.
+   A opacidade baixa permite que o texto fique visível.
+   ========================================================= */
+
+.grupo1 .imagemcard,
+.grupo01 .imagemcard {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /* Diminui a opacidade da fotografia */
+    opacity: 0.32;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   CAMADA TRANSPARENTE DOS CARDS
+   Deixa a fotografia mais clara e o texto mais legível.
+   ========================================================= */
+
+.grupo1::after,
+.grupo01::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-color: rgba(255, 255, 255, 0.28);
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LISTAS DENTRO DOS CARDS
+   O texto fica acima da imagem e da camada transparente.
+   ========================================================= */
+
+.grupo1 ul,
+.grupo01 ul {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 35px 25px 20px 45px;
+
+    padding: 0;
+
+    font-size: 15px;
+    line-height: 2;
+
+    color: #111;
+}
+
+
+/* =========================================================
+   BOTÕES DOS CARDS
+   Ficam sobre a fotografia, na parte inferior.
+   ========================================================= */
+
+.grupo1 button,
+.grupo01 button {
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 25px;
+    right: 25px;
+
+    border: none;
+
+    padding: 13px 20px;
+
+    border-radius: 8px;
+
+    background-color: #3979e8;
+
+    cursor: pointer;
+}
+
+
+/* Botão do card "Encontrar Explicador" */
+.grupo01 button {
+    background-color: #76bd4b;
+}
+
+
+/* Link dentro dos botões */
+.preparar {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.grupo1 button:hover {
+    background-color: #245fc5;
+}
+
+.grupo01 button:hover {
+    background-color: #5b9e38;
+}
+
+
+/* =========================================================
+   ÁREA "SEJA UM EXPLICADOR"
+   Caixa branca semelhante à imagem de referência.
+   ========================================================= */
+
+.seja {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 30px auto 50px;
+
+    padding: 40px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.seja h2 {
+    margin-bottom: 20px;
+
+    font-size: 26px;
+}
+
+.seja p {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+
+/* Lista de vantagens para o explicador */
+.grupo2 ul {
+    padding-left: 25px;
+
+    line-height: 2;
+
+    font-size: 14px;
+}
+
+
+/* Botão "Entrar como Explicador" */
+.grupo2 button {
+    margin-top: 20px;
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    background-color: #78bd4b;
+
+    cursor: pointer;
+}
+
+.grupo2 button:hover {
+    background-color: #5fa139;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   Em telemóveis os cards passam para uma coluna e
+   o texto principal diminui para caber no ecrã.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 65px;
+        padding: 0 5%;
+    }
+
+    .logotipo {
+        width: 100px;
+    }
+
+    .introducao {
+        height: 400px;
+    }
+
+    .texto1 {
+        width: 90%;
+
+        left: 5%;
+
+        font-size: 34px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 92%;
+
+        
+        gap: 20px;
+    }
+
+    .grupo1,
+    .grupo01 {
+        width: 100%;
+        min-height: 350px;
+    }
+
+    .seja {
+        width: 92%;
+
+        padding: 25px;
+    }
+
+    .seja h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================================
+   ECRÃS MUITO PEQUENOS
+   Ajuste específico para telemóveis pequenos.
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .texto1 {
+        font-size: 28px;
+    }
+
+    .introducao {
+        height: 350px;
+    }
+
+    .preparacao {
+        font-size: 17px;
+    }
+
+    .texte2 {
+        font-size: 12px;
+    }
+
+    .grupo1 ul,
+    .grupo01 ul {
+        font-size: 13px;
+        margin-left: 30px;
+    }
+
+    .grupo1 button,
+    .grupo01 button {
+        bottom: 18px;
+        right: 15px;
+
+        padding: 10px 14px;
+    }
+
+    .preparar {
+        font-size: 12px;
+    }
+}

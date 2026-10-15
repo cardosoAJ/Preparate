@@ -1,0 +1,281 @@
+/* ESTILIZACAO GERAL DA PAGINA */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    min-height: 100vh;
+}
+
+
+/* 
+   ÁREA PRINCIPAL
+ */
+ .mae{
+    display: flex;
+    flex-direction:row;
+    gap:20px;
+    flex-wrap:wrap;
+    align-items: center;
+ }
+
+.pai {
+    width: 90%;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+
+/* 
+   CABEÇALHO
+ */
+
+.bead {
+    width: 100%;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* LOGOTIPO */
+
+.bead > img {
+    width: 120px;
+    height: 45px;
+    object-fit: contain;
+}
+
+
+/* 
+   BARRA  DE PESQUISA
+*/
+
+.bead form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.bead input {
+    width: 80%;
+    height: 35px;
+
+    background-color: white;
+
+    border: 1px solid #999;
+    border-radius: 5px;
+
+    padding: 5px 12px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.bead input:focus {
+    border: 2px solid #4c6fff;
+}
+
+
+/* 
+   ÍCONES DO CABEÇALHO
+ */
+
+.bead a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.bead a img {
+    width: 25px;
+    height: 25px;
+
+    object-fit: contain;
+}
+
+
+/* 
+   PERFIL E TÍTULO
+*/
+
+.perfil {
+    display: flex;
+    flex-direction:column;
+   /* align-items: center;*/
+    background-size: cover;
+    gap: 10px;
+
+    margin: 15px 0;
+}
+
+.perfil img {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+}
+
+.perfil h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* 
+   ÁREA DOS CARDS
+*/
+
+.pai_card {
+    width: 300px;
+
+    min-height: 180px;
+
+    display: inline-flex;
+    vertical-align: top;
+
+    flex-direction: column;
+
+    margin: 10px;
+
+    padding: 7px;
+
+    background-color: #88BC58;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+/* 
+   IMAGEM DO EXPLICADOR
+ */
+
+.pai_card > div:first-child {
+    width: 100%;
+    height: 115px;
+
+    background-color: white;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.pai_card > div:first-child img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* 
+   PARTE INFERIOR DO CARTÃO
+ */
+
+.pai_card > div:nth-child(2) {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-top: 5px;
+}
+
+
+/* Informações */
+
+.pai_card > div:nth-child(2) > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.pai_card p {
+    font-size: 11px;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+/* 
+   BOTÃO SOLICITAR
+ */
+
+.pai_card button {
+    background-color: #4c4cff;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 5px 10px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.pai_card button:hover {
+    background-color: #3030d8;
+}
+
+
+/* Link dentro do botão */
+
+.pai_card button a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* 
+   RESPONSIVIDADE
+ */
+
+@media (max-width: 700px) {
+
+    .pai {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .bead {
+        gap: 8px;
+    }
+
+    .bead > img {
+        width: 90px;
+    }
+
+    .bead input {
+        width: 100%;
+    }
+
+    .bead a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .pai_card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

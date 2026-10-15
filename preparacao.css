@@ -1,0 +1,690 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff7f8;
+    color: #202020;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   BARRA SUPERIOR / PESQUISA
+========================================================= */
+
+.pesquisa {
+    width: 100%;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 15px 5%;
+
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* Campo de pesquisa */
+
+.pesquisa input {
+    width: min(520px, 55%);
+    height: 42px;
+
+    padding: 0 45px 0 18px;
+
+    border: 1px solid #dddddd;
+    border-radius: 25px;
+
+    background: #fafafa;
+
+    font-size: 14px;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.pesquisa input:focus {
+    border-color: #58a847;
+    box-shadow: 0 0 0 3px rgba(88, 168, 71, 0.12);
+}
+
+/* Links / ícones do topo */
+
+.pesquisa a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    border-radius: 50%;
+
+    transition: 0.2s;
+}
+
+.pesquisa a:hover {
+    background: #f1f7ef;
+}
+
+.pesquisa a img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   LOGOTIPO
+========================================================= */
+
+.header {
+    width: 100%;
+    padding: 22px 5% 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+.logotipo {
+    width: 145px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   PERFIL + BOTÃO
+========================================================= */
+
+.iconedeperfil {
+    width: 43px;
+    height: 43px;
+
+    object-fit: contain;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-left: 5%;
+}
+
+.botao {
+    margin-left: 18px;
+
+    padding: 9px 18px;
+
+    background: #ffffff;
+    color: #333;
+
+    border: 1px solid #d6d6d6;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.botao:hover {
+    background: #f1f8ee;
+    border-color: #63aa50;
+    color: #438c36;
+}
+
+
+/* =========================================================
+   TÍTULO DOS GRUPOS
+========================================================= */
+
+.parafrafo {
+    margin: 35px 0 12px 5%;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #222;
+}
+
+
+/* =========================================================
+   NOME DO GRUPO
+========================================================= */
+
+.moveiconeimage,
+.move {
+    margin-left: 5%;
+    margin-bottom: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.moveiconeimage .iconedeperfil,
+.move .iconedeperfil {
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+}
+
+.paragrafo1 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+/* =========================================================
+   PRIMEIRO CARD
+========================================================= */
+
+.card {
+    position: relative;
+
+    width: 42%;
+    min-width: 320px;
+
+    margin-left: 5%;
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    background: #63b04e;
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(202, 5, 5, 0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+/* imagem do card */
+
+.card > img {
+    display: block;
+
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+}
+
+/* título sobre a imagem */
+
+.paragrafo2 {
+    position: absolute;
+
+    top: 145px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 35px 18px 12px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.65)
+    );
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DO PRIMEIRO CARD
+========================================================= */
+
+.lista,
+.linta1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    padding: 14px 20px;
+
+    color: white;
+}
+
+.lista p,
+.linta1 p {
+    font-size: 13px;
+}
+
+.lista p::after,
+.linta1 p::after {
+    content: " —";
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   SEGUNDO CARD
+========================================================= */
+
+.cards {
+    position: relative;
+
+    width: 42%;
+    min-width: 320px;
+
+    margin-left: 5%;
+    margin-bottom: 30px;
+
+    overflow: hidden;
+
+    background: #63b04e;
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.cards:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+.cards > img {
+    display: block;
+
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+}
+
+.cards .paragrafo2 {
+    top: 145px;
+}
+
+.lista2,
+.linta3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    padding: 14px 20px;
+
+    color: white;
+}
+
+.lista2 p,
+.linta3 p {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PREPARAÇÕES EM CURSO
+========================================================= */
+
+.emcurso {
+    width: 42%;
+
+    margin-left: 52%;
+    margin-top: -730px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cartões */
+
+.item,
+.item1,
+.item2,
+.item3 {
+    width: 100%;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+
+    transition: 0.25s;
+}
+
+.item:hover,
+.item1:hover,
+.item2:hover,
+.item3:hover {
+    transform: translateX(-3px);
+}
+
+/* Cores */
+
+.item {
+    background: #f9dce7;
+}
+
+.item1 {
+    background: #fff0bd;
+}
+
+.item2 {
+    background: #d9f3f7;
+}
+
+.item3 {
+    background: #dff0d7;
+}
+
+
+/* =========================================================
+   TEXTO DOS CARTÕES
+========================================================= */
+
+.item p,
+.item1 p,
+.item2 p,
+.item3 p {
+    margin-bottom: 10px;
+
+    font-size: 13px;
+    line-height: 1.45;
+
+    color: #333;
+}
+
+/* primeira informação */
+
+.item p:first-child,
+.item1 p:first-child,
+.item2 p:first-child,
+.item3 p:first-child {
+    font-weight: 700;
+    color: #222;
+}
+
+
+/* =========================================================
+   BOTÃO PARTICIPAR
+========================================================= */
+
+.botao1 {
+    float: right;
+
+    position: static;
+
+    padding: 7px 13px;
+
+    border: none;
+    border-radius: 18px;
+
+    background: #ffffff;
+    color: #438f36;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao1:hover {
+    background: #438f36;
+    color: white;
+}
+
+
+/* =========================================================
+   ORGANIZAÇÃO DESKTOP
+========================================================= */
+
+@media (min-width: 1000px) {
+
+    /*
+       Os dois grupos ficam lado a lado.
+       Como o HTML atual possui elementos separados,
+       usamos flex para organizar visualmente.
+    */
+
+    .card,
+    .cards {
+        width: 40%;
+    }
+
+    .move {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .pesquisa {
+        padding: 12px 4%;
+        gap: 10px;
+    }
+
+    .pesquisa input {
+        width: 55%;
+    }
+
+    .parafrafo {
+        margin-left: 4%;
+    }
+
+    .iconedeperfil {
+        margin-left: 4%;
+    }
+
+    .card,
+    .cards {
+        width: 90%;
+        min-width: auto;
+        margin-left: 4%;
+    }
+
+    .emcurso {
+        width: 90%;
+        margin: 30px auto;
+    }
+}
+
+
+/* =========================================================
+   TELEMÓVEL
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .pesquisa {
+        min-height: 65px;
+
+        padding: 10px 15px;
+
+        gap: 7px;
+    }
+
+    .pesquisa input {
+        width: 100%;
+        height: 38px;
+
+        font-size: 12px;
+    }
+
+    .pesquisa a {
+        width: 32px;
+        height: 32px;
+    }
+
+    .pesquisa a img {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    /* Logotipo */
+
+    .header {
+        padding: 18px 20px 5px;
+    }
+
+    .logotipo {
+        width: 120px;
+    }
+
+
+    /* Perfil */
+
+    .iconedeperfil {
+        width: 38px;
+        height: 38px;
+        margin-left: 20px;
+    }
+
+    .botao {
+        margin-left: 8px;
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+
+    /* Título */
+
+    .parafrafo {
+        margin: 28px 20px 15px;
+
+        font-size: 21px;
+    }
+
+
+    /* Grupo */
+
+    .moveiconeimage,
+    .move {
+        margin-left: 20px;
+    }
+
+
+    /* Cards */
+
+    .card,
+    .cards {
+        width: calc(100% - 40px);
+
+        min-width: 0;
+
+        margin-left: 20px;
+    }
+
+    .card > img,
+    .cards > img {
+        height: 175px;
+    }
+
+    .paragrafo2 {
+        top: 130px;
+
+        font-size: 16px;
+    }
+
+    .lista,
+    .linta1,
+    .lista2,
+    .linta3 {
+        gap: 8px;
+        padding: 11px 15px;
+    }
+
+    .lista p,
+    .linta1 p,
+    .lista2 p,
+    .linta3 p {
+        font-size: 11px;
+    }
+
+
+    /* Preparações em curso */
+
+    .emcurso {
+        width: calc(100% - 40px);
+
+        margin: 30px 20px;
+
+        gap: 12px;
+    }
+
+    .item,
+    .item1,
+    .item2,
+    .item3 {
+        padding: 16px;
+    }
+
+    .item p,
+    .item1 p,
+    .item2 p,
+    .item3 p {
+        font-size: 12px;
+    }
+
+    .botao1 {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   TELEMÓVEIS MUITO PEQUENOS
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .pesquisa a {
+        display: none;
+    }
+
+    .pesquisa input {
+        width: 100%;
+    }
+
+    .botao {
+        font-size: 10px;
+        padding: 7px 9px;
+    }
+
+    .paragrafo2 {
+        font-size: 15px;
+    }
+}
