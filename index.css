@@ -166,7 +166,7 @@ body {
     padding: 25px;
      background-image: 
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url(..preparar.jpg);
+        url(preparar.jpg);
 
     background-size: cover;
     background-position: center;
@@ -178,7 +178,7 @@ body {
     min-height: 240px;
     padding: 25px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-     url(..explicador.avif);
+     url(explicador.avif);
     background-size: cover;
     background-position: center;
 
